@@ -10,7 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
         IWork work = new Work();
-        
+
         InvocationHandler handler = new DynamicProxy.MyInvocationHandler(work);
         ClassLoader classLoader = work.getClass().getClassLoader();
         Class<?>[] interfaces = work.getClass().getInterfaces();
